@@ -22,10 +22,10 @@ const DesktopNavigation = ({ menuItems, scrolled }: DesktopNavigationProps) => {
               href={item.href}
               className={cn(
                 'text-sm font-medium relative inline-flex items-center transition-colors duration-200',
-                'hover:text-primary focus:text-primary',
-                scrolled ? 'text-gray-800' : 'text-gray-800',
+                'hover:text-white/80 focus:text-white/80',
+                scrolled ? 'text-white' : 'text-white',
                 'after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0',
-                'after:bg-primary after:transition-all after:duration-300',
+                'after:bg-white after:transition-all after:duration-300',
                 'hover:after:w-full focus:after:w-full'
               )}
             >

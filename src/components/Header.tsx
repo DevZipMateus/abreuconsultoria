@@ -71,8 +71,8 @@ const Header = () => {
       className={cn(
         'fixed w-full z-50 transition-all duration-300 ease-in-out',
         scrolled 
-          ? 'bg-white/95 backdrop-blur-md shadow-sm py-3' 
-          : 'bg-transparent py-4'
+          ? 'bg-primary shadow-sm py-3' 
+          : 'bg-primary py-4'
       )}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">

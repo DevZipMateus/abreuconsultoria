@@ -20,7 +20,7 @@ const Logo = ({ scrolled }: LogoProps) => {
       <div
         className={cn(
           "text-xl font-bold transition-all duration-300",
-          scrolled ? "text-primary" : "text-primary",
+          scrolled ? "text-white" : "text-white",
         )}
       >
         Abreu Consultoria
