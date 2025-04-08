@@ -8,14 +8,22 @@ interface LogoProps {
 const Logo = ({ scrolled }: LogoProps) => {
   return (
     <a href="#" className="flex items-center z-10 relative">
-      <div
+      <img 
+        src="/lovable-uploads/fe175ac7-bb16-4af1-b64d-7f593ae76356.png" 
+        alt="Abreu Consultoria e BPO Financeiro" 
         className={cn(
-          "text-3xl font-bold transition-all duration-300",
-          scrolled ? "text-primary" : "text-primary",
+          "h-10 mr-3 transition-all duration-300",
+          scrolled ? "opacity-100" : "opacity-100",
           "hover:scale-105"
         )}
+      />
+      <div
+        className={cn(
+          "text-xl font-bold transition-all duration-300",
+          scrolled ? "text-primary" : "text-primary",
+        )}
       >
-        Contabilify
+        Abreu Consultoria
       </div>
     </a>
   );

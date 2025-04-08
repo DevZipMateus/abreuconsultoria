@@ -4,12 +4,12 @@ import AnimatedSection from './AnimatedSection';
 
 const AboutSection = () => {
   const features = [
-    'Equipe altamente qualificada',
+    'Experiência em gestão financeira',
     'Atendimento personalizado',
-    'Tecnologia de ponta',
+    'Visão estratégica de negócios',
     'Confidencialidade e segurança',
     'Suporte contínuo',
-    'Atualizações fiscais constantes'
+    'Análise de indicadores financeiros'
   ];
 
   return (
@@ -18,7 +18,7 @@ const AboutSection = () => {
         <AnimatedSection>
           <h2 className="section-title">Sobre Nós</h2>
           <p className="section-subtitle">
-            Conheça nossa história e nosso compromisso com a excelência em serviços contábeis
+            Conheça nossa história e nossa missão de contribuir para uma sociedade mais próspera
           </p>
         </AnimatedSection>
 
@@ -27,14 +27,14 @@ const AboutSection = () => {
             <div className="relative">
               <div className="relative z-10 rounded-2xl overflow-hidden shadow-xl">
                 <img 
-                  src="https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80" 
-                  alt="Nossa Equipe" 
+                  src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                  alt="Maicon Abreu - Fundador" 
                   className="w-full h-auto object-cover"
                 />
               </div>
               
               <div className="absolute -bottom-6 -right-6 w-48 h-48 bg-primary/10 rounded-full z-0"></div>
-              <div className="absolute -top-6 -left-6 w-32 h-32 bg-blue-100 rounded-full z-0"></div>
+              <div className="absolute -top-6 -left-6 w-32 h-32 bg-secondary/10 rounded-full z-0"></div>
             </div>
           </AnimatedSection>
           
@@ -42,15 +42,19 @@ const AboutSection = () => {
             <span className="inline-block text-sm font-semibold py-1 px-3 bg-primary/10 text-primary rounded-full">
               Nossa História
             </span>
-            <h3 className="text-3xl font-bold">Compromisso com a sua empresa</h3>
+            <h3 className="text-3xl font-bold">Compromisso com o seu sucesso financeiro</h3>
             <p className="text-gray-600">
-              Fundada em 2005, nossa empresa de contabilidade tem se destacado pela excelência 
-              em serviços contábeis, fiscais e empresariais. Ao longo de mais de 15 anos, 
-              construímos uma sólida reputação baseada em confiança, transparência e resultados.
+              Em 2015, Maicon Abreu, um administrador com vasta experiência em gestão financeira, estratégica e de pessoas, 
+              e terapeuta comportamental formado pela Fundação Napoleon Hill dos EUA, fundou nosso escritório de BPO Financeiro.
             </p>
             <p className="text-gray-600">
-              Nossa equipe é formada por profissionais experientes e altamente qualificados, 
-              sempre atualizados com as mais recentes mudanças na legislação e práticas contábeis.
+              Com uma visão clara de contribuir para uma sociedade mais próspera, o escritório se dedica à gestão financeira terceirizada, 
+              auxiliando empresas a se tornarem sólidas e lucrativas.
+            </p>
+            <p className="text-gray-600">
+              Acreditamos que a saúde financeira é a base para o sucesso de qualquer negócio. Por isso, oferecemos serviços personalizados 
+              que abrangem desde o controle de fluxo de caixa e contas a pagar e receber até a análise de indicadores financeiros e 
+              planejamento estratégico.
             </p>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-4">
