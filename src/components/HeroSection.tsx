@@ -37,20 +37,18 @@ const HeroSection = () => {
               </a>
             </div>
 
-            <div className="pt-8 flex flex-wrap items-center gap-8">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-primary">+8</div>
-                <div className="text-sm text-gray-600">Anos de Experiência</div>
+            <div className="pt-8 grid grid-cols-3 gap-2 md:gap-4 w-full max-w-md">
+              <div className="text-center bg-white/50 backdrop-blur-sm rounded-lg p-3 shadow-sm">
+                <div className="text-xl md:text-3xl font-bold text-primary">+8</div>
+                <div className="text-xs md:text-sm text-gray-600">Anos de Experiência</div>
               </div>
-              <div className="hidden sm:block h-12 w-px bg-gray-200"></div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-primary">100%</div>
-                <div className="text-sm text-gray-600">Personalizado</div>
+              <div className="text-center bg-white/50 backdrop-blur-sm rounded-lg p-3 shadow-sm">
+                <div className="text-xl md:text-3xl font-bold text-primary">100%</div>
+                <div className="text-xs md:text-sm text-gray-600">Personalizado</div>
               </div>
-              <div className="hidden sm:block h-12 w-px bg-gray-200"></div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-primary">BPO</div>
-                <div className="text-sm text-gray-600">Financeiro</div>
+              <div className="text-center bg-white/50 backdrop-blur-sm rounded-lg p-3 shadow-sm">
+                <div className="text-xl md:text-3xl font-bold text-primary">BPO</div>
+                <div className="text-xs md:text-sm text-gray-600">Financeiro</div>
               </div>
             </div>
           </AnimatedSection>
