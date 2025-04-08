@@ -1,13 +1,7 @@
-
 import { ChevronRight } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
-
 const HeroSection = () => {
-  return (
-    <section 
-      id="início" 
-      className="relative min-h-screen flex items-start pt-24 md:pt-16 md:items-center bg-gradient-to-r from-gray-50 to-white overflow-hidden"
-    >
+  return <section id="início" className="relative min-h-screen flex items-start pt-24 md:pt-16 md:items-center bg-gradient-to-r from-gray-50 to-white overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-y-0 right-0 w-1/2 bg-primary/5 skew-x-12 transform origin-bottom"></div>
@@ -18,9 +12,7 @@ const HeroSection = () => {
       <div className="container mx-auto px-4 z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
           <AnimatedSection animation="fade-in-up" className="space-y-6">
-            <span className="inline-block text-sm font-semibold py-1 px-3 bg-primary/10 text-primary rounded-full">
-              BPO Financeiro Especializado
-            </span>
+            
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight">
               Transformando <br />
               <span className="text-primary">números em resultados</span>
@@ -62,11 +54,7 @@ const HeroSection = () => {
               <div className="absolute -top-12 -left-8 w-64 h-64 bg-primary/10 rounded-full filter blur-xl"></div>
               <div className="absolute -bottom-6 -right-6 w-48 h-48 bg-secondary/30 rounded-full filter blur-xl"></div>
               <div className="relative z-10 bg-white/80 backdrop-blur-sm shadow-xl rounded-2xl p-1 transform transition-all duration-500 hover:scale-[1.01] hover:shadow-2xl">
-                <img 
-                  src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2076&q=80" 
-                  alt="Gestão Financeira Profissional" 
-                  className="rounded-2xl w-full h-auto object-cover"
-                />
+                <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2076&q=80" alt="Gestão Financeira Profissional" className="rounded-2xl w-full h-auto object-cover" />
               </div>
             </div>
           </AnimatedSection>
@@ -74,8 +62,6 @@ const HeroSection = () => {
       </div>
       
       <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-background to-transparent"></div>
-    </section>
-  );
+    </section>;
 };
-
 export default HeroSection;
