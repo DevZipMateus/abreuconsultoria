@@ -1,21 +1,13 @@
-
 import { Facebook, Instagram, Linkedin, Phone, Mail, MapPin } from 'lucide-react';
-
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  
-  return (
-    <footer className="bg-gray-900 text-white">
+  return <footer className="bg-gray-900 text-white">
       <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
             <h3 className="text-xl font-bold mb-4">Abreu Consultoria</h3>
             <div className="flex items-center mb-4">
-              <img 
-                src="/lovable-uploads/fe175ac7-bb16-4af1-b64d-7f593ae76356.png" 
-                alt="Abreu Consultoria e BPO Financeiro" 
-                className="h-10 mr-2"
-              />
+              <img src="/lovable-uploads/fe175ac7-bb16-4af1-b64d-7f593ae76356.png" alt="Abreu Consultoria e BPO Financeiro" className="h-10 mr-2" />
             </div>
             <p className="text-gray-400 mb-6">
               Transformando números em resultados. Soluções financeiras completas para empresas que buscam solidez e lucratividade.
@@ -83,11 +75,9 @@ const Footer = () => {
         
         <div className="border-t border-gray-800 mt-12 pt-8 text-gray-400 text-sm text-center">
           <p>&copy; {currentYear} Abreu Consultoria e BPO Financeiro. Todos os direitos reservados.</p>
-          <p className="mt-2">Desenvolvido com <span className="text-red-500">❤</span> por Lovable</p>
+          
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
