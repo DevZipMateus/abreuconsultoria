@@ -1,7 +1,13 @@
+
 import { ChevronRight } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
+
 const HeroSection = () => {
-  return <section id="início" className="relative min-h-screen flex items-start pt-24 md:pt-16 md:items-center bg-gradient-to-r from-gray-50 to-white overflow-hidden">
+  return (
+    <section 
+      id="início" 
+      className="relative min-h-screen flex items-start pt-24 md:pt-16 md:items-center bg-gradient-to-r from-gray-50 to-white overflow-hidden"
+    >
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-y-0 right-0 w-1/2 bg-primary/5 skew-x-12 transform origin-bottom"></div>
@@ -9,7 +15,7 @@ const HeroSection = () => {
         <div className="absolute bottom-1/3 right-1/3 w-32 h-32 md:w-40 md:h-40 rounded-full bg-secondary/20"></div>
       </div>
 
-      <div className="container mx-auto px-4 z-10">
+      <div className="container mx-auto px-4 z-10 w-full">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
           <AnimatedSection animation="fade-in-up" className="space-y-6">
             
@@ -31,17 +37,17 @@ const HeroSection = () => {
               </a>
             </div>
 
-            <div className="pt-8 flex items-center gap-8">
+            <div className="pt-8 flex flex-wrap items-center gap-8">
               <div className="text-center">
                 <div className="text-3xl font-bold text-primary">+8</div>
                 <div className="text-sm text-gray-600">Anos de Experiência</div>
               </div>
-              <div className="h-12 w-px bg-gray-200"></div>
+              <div className="hidden sm:block h-12 w-px bg-gray-200"></div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-primary">100%</div>
                 <div className="text-sm text-gray-600">Personalizado</div>
               </div>
-              <div className="h-12 w-px bg-gray-200"></div>
+              <div className="hidden sm:block h-12 w-px bg-gray-200"></div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-primary">BPO</div>
                 <div className="text-sm text-gray-600">Financeiro</div>
@@ -62,6 +68,8 @@ const HeroSection = () => {
       </div>
       
       <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-background to-transparent"></div>
-    </section>;
+    </section>
+  );
 };
+
 export default HeroSection;
