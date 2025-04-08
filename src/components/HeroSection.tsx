@@ -1,4 +1,3 @@
-
 import { ChevronRight } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
 
@@ -6,7 +5,7 @@ const HeroSection = () => {
   return (
     <section 
       id="início" 
-      className="relative min-h-screen flex items-start pt-24 md:pt-16 md:items-center bg-gradient-to-r from-gray-50 to-white overflow-hidden"
+      className="relative min-h-screen flex items-start pt-32 md:pt-28 md:items-center bg-gradient-to-r from-gray-50 to-white overflow-hidden"
     >
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
