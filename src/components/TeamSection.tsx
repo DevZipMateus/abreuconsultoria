@@ -1,60 +1,150 @@
 
-import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
+import { 
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious
+} from '@/components/ui/carousel';
+import { Card, CardContent } from '@/components/ui/card';
+import { cn } from '@/lib/utils';
+import { 
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger
+} from '@/components/ui/tooltip';
 import AnimatedSection from './AnimatedSection';
 
-interface TeamMember {
-  name: string;
-  role: string;
-  image: string;
+interface OfficeImage {
+  src: string;
+  alt: string;
+  description?: string;
 }
 
 const TeamSection = () => {
-  const teamMembers: TeamMember[] = [
-    { name: 'André Silva', role: 'CEO & Consultor Financeiro', image: '/lovable-uploads/IMG_2096.jpeg' },
-    { name: 'Carla Mendes', role: 'Diretora Financeira', image: '/lovable-uploads/IMG_2084.jpeg' },
-    { name: 'Ricardo Oliveira', role: 'Consultor Tributário', image: '/lovable-uploads/IMG_2085.jpeg' },
-    { name: 'Fernanda Costa', role: 'Analista Financeira', image: '/lovable-uploads/IMG_2083.jpeg' },
-    { name: 'Bruno Santos', role: 'Especialista em BPO', image: '/lovable-uploads/IMG_2082.jpeg' },
-    { name: 'Tatiana Almeida', role: 'Contadora', image: '/lovable-uploads/IMG_2081.jpeg' },
-    { name: 'Paulo Mendonça', role: 'Gestor de Projetos', image: '/lovable-uploads/IMG_1942.jpeg' },
-    { name: 'Renata Vieira', role: 'Analista Contábil', image: '/lovable-uploads/IMG_1955.jpeg' },
-    { name: 'Marcelo Pereira', role: 'Consultor de Negócios', image: '/lovable-uploads/IMG_2079.jpeg' },
-    { name: 'Luciana Martins', role: 'Especialista Fiscal', image: '/lovable-uploads/IMG_1873.jpeg' },
-    { name: 'Roberto Dias', role: 'Analista de Processos', image: '/lovable-uploads/IMG_1939.jpeg' },
-    { name: 'Amanda Sousa', role: 'Coordenadora Financeira', image: '/lovable-uploads/IMG_1868.jpeg' },
-    { name: 'Diego Lima', role: 'Consultor de ERP', image: '/lovable-uploads/IMG_1861.jpeg' },
-    { name: 'Juliana Castro', role: 'Analista de Controladoria', image: '/lovable-uploads/IMG_1867.jpeg' },
-    { name: 'Gabriel Torres', role: 'Assistente Financeiro', image: '/lovable-uploads/IMG_1866.jpeg' },
+  const officeImages: OfficeImage[] = [
+    { 
+      src: '/lovable-uploads/IMG_2096.jpeg', 
+      alt: 'Sala de reuniões principal',
+      description: 'Sala de reuniões com capacidade para 12 pessoas'
+    },
+    { 
+      src: '/lovable-uploads/IMG_2084.jpeg', 
+      alt: 'Espaço colaborativo',
+      description: 'Área de trabalho colaborativo'
+    },
+    { 
+      src: '/lovable-uploads/IMG_2085.jpeg', 
+      alt: 'Recepção',
+      description: 'Recepção moderna e acolhedora'
+    },
+    { 
+      src: '/lovable-uploads/IMG_2083.jpeg', 
+      alt: 'Escritório executivo',
+      description: 'Escritório da diretoria' 
+    },
+    { 
+      src: '/lovable-uploads/IMG_2082.jpeg', 
+      alt: 'Área de descompressão',
+      description: 'Espaço para relaxamento e descompressão'
+    },
+    { 
+      src: '/lovable-uploads/IMG_2081.jpeg', 
+      alt: 'Sala de conferências',
+      description: 'Sala equipada para videoconferências'
+    },
+    { 
+      src: '/lovable-uploads/IMG_1942.jpeg', 
+      alt: 'Estação de trabalho',
+      description: 'Estações de trabalho ergonômicas'
+    },
+    { 
+      src: '/lovable-uploads/IMG_1955.jpeg', 
+      alt: 'Copa e cozinha',
+      description: 'Espaço para refeições e café'
+    },
+    { 
+      src: '/lovable-uploads/IMG_2079.jpeg', 
+      alt: 'Sala de treinamento',
+      description: 'Ambiente para treinamentos e workshops'
+    },
+    { 
+      src: '/lovable-uploads/IMG_1873.jpeg', 
+      alt: 'Fachada do prédio',
+      description: 'Fachada moderna do nosso escritório'
+    },
   ];
 
   return (
     <section id="team" className="py-16 bg-gray-50">
       <div className="section-container">
         <AnimatedSection>
-          <h2 className="section-title">Nossa Equipe</h2>
+          <h2 className="section-title">Nosso Escritório</h2>
           <p className="section-subtitle">
-            Conheça os profissionais dedicados a fazer sua empresa crescer
+            Conheça os ambientes onde transformamos ideias em soluções financeiras
           </p>
         </AnimatedSection>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 mt-12">
-          {teamMembers.map((member, index) => (
-            <AnimatedSection 
-              key={index} 
-              animation="fade-in-up" 
-              delay={index * 50}
-              className="flex flex-col items-center"
-            >
-              <Avatar className="w-28 h-28 mb-3 border-2 border-primary shadow-md">
-                <AvatarImage src={member.image} alt={member.name} />
-                <AvatarFallback className="bg-primary text-white text-xl">
-                  {member.name.split(' ').map(n => n[0]).join('')}
-                </AvatarFallback>
-              </Avatar>
-              <h3 className="font-semibold text-center">{member.name}</h3>
-              <p className="text-sm text-gray-600 text-center">{member.role}</p>
-            </AnimatedSection>
-          ))}
+        <div className="mt-12">
+          {/* Layout para telas grandes */}
+          <div className="hidden lg:grid grid-cols-3 gap-6">
+            {officeImages.map((image, index) => (
+              <AnimatedSection 
+                key={index} 
+                animation={index % 2 === 0 ? "fade-in-up" : "fade-in"} 
+                delay={index * 100}
+                className="aspect-square relative group overflow-hidden rounded-lg"
+              >
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <div className="w-full h-full relative overflow-hidden rounded-lg">
+                      <img 
+                        src={image.src} 
+                        alt={image.alt}
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                        <p className="text-white font-medium">{image.description}</p>
+                      </div>
+                    </div>
+                  </TooltipTrigger>
+                  <TooltipContent side="top" className="bg-primary text-white">
+                    <p>{image.alt}</p>
+                  </TooltipContent>
+                </Tooltip>
+              </AnimatedSection>
+            ))}
+          </div>
+          
+          {/* Carrossel para telas menores */}
+          <div className="lg:hidden">
+            <Carousel className="w-full">
+              <CarouselContent>
+                {officeImages.map((image, index) => (
+                  <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                    <Card className="border-none">
+                      <CardContent className="p-1">
+                        <div className="aspect-square relative overflow-hidden rounded-lg">
+                          <img 
+                            src={image.src} 
+                            alt={image.alt}
+                            className="w-full h-full object-cover"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-4">
+                            <p className="text-white font-medium text-sm">{image.description}</p>
+                          </div>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <div className="flex justify-center mt-4">
+                <CarouselPrevious className="relative static left-0 translate-y-0 mr-2" />
+                <CarouselNext className="relative static right-0 translate-y-0 ml-2" />
+              </div>
+            </Carousel>
+          </div>
         </div>
       </div>
     </section>
