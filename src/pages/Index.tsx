@@ -5,6 +5,7 @@ import HeroSection from '@/components/HeroSection';
 import AboutSection from '@/components/AboutSection';
 import ServicesSection from '@/components/ServicesSection';
 import BenefitsSection from '@/components/BenefitsSection';
+import TeamSection from '@/components/TeamSection';
 import EgestorERP from '@/components/EgestorERP';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
@@ -51,6 +52,7 @@ const Index = () => {
         <AboutSection />
         <ServicesSection />
         <BenefitsSection />
+        <TeamSection />
         <EgestorERP />
         <ContactSection />
       </main>
