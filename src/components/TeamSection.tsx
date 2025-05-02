@@ -7,7 +7,6 @@ import {
   CarouselPrevious
 } from '@/components/ui/carousel';
 import { Card, CardContent } from '@/components/ui/card';
-import { cn } from '@/lib/utils';
 import { 
   Tooltip,
   TooltipContent,
@@ -72,6 +71,31 @@ const TeamSection = () => {
       src: '/lovable-uploads/IMG_1873.jpeg', 
       alt: 'Fachada do prédio',
       description: 'Fachada moderna do nosso escritório'
+    },
+    { 
+      src: '/lovable-uploads/IMG_1861.jpeg', 
+      alt: 'Área de inovação',
+      description: 'Espaço dedicado à inovação e criatividade'
+    },
+    { 
+      src: '/lovable-uploads/IMG_1866.jpeg', 
+      alt: 'Sala de projetos',
+      description: 'Ambiente para desenvolvimento de projetos'
+    },
+    { 
+      src: '/lovable-uploads/IMG_1867.jpeg', 
+      alt: 'Estação de design',
+      description: 'Área dedicada ao design e criação'
+    },
+    { 
+      src: '/lovable-uploads/IMG_1868.jpeg', 
+      alt: 'Laboratório tecnológico',
+      description: 'Espaço para testes e desenvolvimento tecnológico'
+    },
+    { 
+      src: '/lovable-uploads/IMG_1939.jpeg', 
+      alt: 'Sala de reuniões secundária',
+      description: 'Sala para reuniões menores e brainstorming'
     },
   ];
 
